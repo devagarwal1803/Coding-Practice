@@ -27,12 +27,10 @@ Node<int>* deleteMid(Node<int> *head) {
     first=second=head;
     while(second->next!=NULL && second->next->next!=NULL)
     {
-        //printf("%d %d\n",first->data,second->data);
         prev=first;
         first=first->next;
         second=second->next->next;
     }
-    //printf("%d %d\n",prev->data,first->data);
     prev->next=first->next;
     return head;
 
